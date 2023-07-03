@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
-
+//this includes some scrollable resultSet services
 public class ScrollableService {
 
     //<-----------------common methods in scrollable resultSet---------------->

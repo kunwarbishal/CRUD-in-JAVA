@@ -1,5 +1,6 @@
 package com.crud.database;
 
+// It includes Queries for different statements
 public class QueryUtils {
     public static String insertStudentQuery() {
         return "INSERT INTO studentinfo (name,age,address) VALUES(?,?,?)";

@@ -7,7 +7,7 @@ import com.crud.services.ScrollableService;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
-
+// this is the menu for the program
 public class ProgramMenu {
     public static void startMenu() throws SQLException {
         try (Scanner scanner = new Scanner(System.in)) {

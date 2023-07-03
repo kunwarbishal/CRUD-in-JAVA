@@ -5,7 +5,7 @@ import com.crud.database.QueryUtils;
 import com.crud.model.Student;
 
 import java.sql.*;
-
+//this includes some crud services
 public class CrudService {
     public static  void insertStudent(Student student) throws SQLException {
 
