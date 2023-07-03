@@ -5,7 +5,7 @@ import com.crud.database.DatabaseConnection;
 import com.crud.database.QueryUtils;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

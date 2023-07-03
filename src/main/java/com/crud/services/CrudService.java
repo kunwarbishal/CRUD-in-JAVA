@@ -9,7 +9,7 @@ import java.sql.*;
 public class CrudService {
     public static  void insertStudent(Student student) throws SQLException {
 
-        try (Connection connection = DatabaseConnection.getConnection();) //auto closes the connection after try block
+        try (Connection connection = DatabaseConnection.getConnection()) //auto closes the connection after try block
         {
             PreparedStatement preparedStatement = connection.prepareStatement(QueryUtils.insertStudentQuery());
             preparedStatement.setString(1, student.getStudentName());
@@ -49,7 +49,7 @@ public class CrudService {
         boolean isFound = false;
         try (Connection connection = DatabaseConnection.getConnection();
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(QueryUtils.getStudentByIdQuery(id));) {
+             ResultSet resultSet = statement.executeQuery(QueryUtils.getStudentByIdQuery(id))) {
             if (resultSet.next()) {
                 isFound = true;
                 printStudentInfo(new Student(resultSet.getInt("id"), resultSet.getString("name"), resultSet.getInt("age"), resultSet.getString("address")));
@@ -63,7 +63,7 @@ public class CrudService {
     //delete student start
     public static void deleteStudent(int id) throws SQLException {
         try (Connection connection = DatabaseConnection.getConnection();
-             Statement statement = connection.createStatement();) {
+             Statement statement = connection.createStatement()) {
             int rows = statement.executeUpdate(QueryUtils.deleteStudentQuery(id));
             if (rows > 0) {
                 System.out.println("Student Record Deleted Successfully");

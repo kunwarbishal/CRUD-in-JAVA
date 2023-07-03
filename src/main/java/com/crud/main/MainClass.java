@@ -10,9 +10,7 @@ public class MainClass {
             ProgramMenu.startMenu();
 
         } catch (SQLException e) {
-            throw new RuntimeException("Something went wrong :( " + e);
-        } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Something went wrong :( " + e);
         }
 
     }
