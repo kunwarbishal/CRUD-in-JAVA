@@ -6,8 +6,8 @@ import com.crud.model.Student;
 
 import java.sql.*;
 
-public class DatabaseService {
-    public void insertStudent(Student student) throws SQLException {
+public class CrudService {
+    public static  void insertStudent(Student student) throws SQLException {
 
         try (Connection connection = DatabaseConnection.getConnection();) //auto closes the connection after try block
         {
@@ -24,7 +24,7 @@ public class DatabaseService {
         }
     } //end of insert method
 
-    public void getAllStudent() throws SQLException {
+    public static void getAllStudent() throws SQLException {
         try (Connection connection = DatabaseConnection.getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(QueryUtils.selectAllStudentQuery())) {
@@ -33,14 +33,15 @@ public class DatabaseService {
             }
 
         }
-    }//end of selectAllStudent
+    }//end of getAllStudent
 
     private static void printStudentInfo(Student student) {
+        System.out.println("________________________________________________");
         System.out.println("Student id: " + student.getStudentId());
         System.out.println("Student Name: " + student.getStudentName());
         System.out.println("Student Age: " + student.getStudentAge());
         System.out.println("Student Address: " + student.getStudentAddress());
-        System.out.println("_____________________________");
+        System.out.println("________________________________________________");
     }//end of printStudentInfo
 
     //getStudentById start

@@ -20,5 +20,10 @@ public class QueryUtils {
     public static String updateStudentQuery(int id) {
         return "UPDATE studentinfo SET name = ?, age = ? ,address=? WHERE id = " + id;
     }
+    //-------------------callable statement ------------------------->
+    public  static String callableGetStudentQuery(int i){
+        return "{call getStudentById("+i+")}";
+
+    }
 
 }
