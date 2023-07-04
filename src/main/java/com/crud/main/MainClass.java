@@ -9,8 +9,8 @@ public class MainClass {
           //  CallableStatement.getCallableStatement();
             ProgramMenu.startMenu();
 
-        } catch (SQLException e) {
-            System.out.println("Something went wrong :( " + e);
+        } catch (SQLException ex) {
+            System.out.println("Something went wrong :( " + ex);
         }
 
     }
