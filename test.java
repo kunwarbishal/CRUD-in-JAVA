@@ -19,4 +19,7 @@ public class test {
     public static void feature2() {
         System.out.println("this is feature 2");
     }
+    public static void feature3() {
+        System.out.println("this is feature 3");
+    }
 }
