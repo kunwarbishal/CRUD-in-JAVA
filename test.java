@@ -22,4 +22,7 @@ public class test {
     public static void feature3() {
         System.out.println("this is feature 3");
     }
+    public static void feature4(){
+        System.out.println("this is feature 4");
+    }
 }
